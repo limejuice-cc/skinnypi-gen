@@ -1,6 +1,6 @@
-# pi-gen
+# skinnypi-gen
 
-Tool used to create Raspberry Pi OS images. (Previously known as Raspbian).
+Tool used to create Skinny PI OS images forked from Raspberry Pi OS.
 
 
 ## Dependencies
