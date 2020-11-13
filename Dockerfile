@@ -11,6 +11,6 @@ RUN apt-get -y update && \
         binfmt-support ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-COPY . /pi-gen/
+COPY . /skinnypi-gen/
 
-VOLUME [ "/pi-gen/work", "/pi-gen/deploy"]
+VOLUME [ "/skinnypi-gen/work", "/skinnypi-gen/deploy"]
