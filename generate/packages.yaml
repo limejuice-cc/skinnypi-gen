@@ -1,0 +1,63 @@
+stages:
+  stage0:
+    01-locale:
+      00-packages:
+        - locales
+    02-firmware:
+      01-packages:
+        - raspberrypi-bootloader
+        - raspberrypi-kernel
+  stage1:
+    02-net-tweaks:
+      00-packages:
+        - netbase
+    03-install-packages:
+      00-packages:
+        - libraspberrypi-bin
+        - libraspberrypi0
+        - raspi-config
+  stage2:
+    01-sys-tweaks:
+      00-packages:
+        - ssh
+        - less
+        - fbset
+        - sudo
+        - psmisc
+        - console-setup
+        - keyboard-configuration
+        - debconf-utils
+        - parted
+        - unzip
+        - pkg-config
+        - v4l-utils
+        - hardlink
+        - ca-certificates
+        - curl
+        - fake-hwclock
+        - nfs-common
+        - usbutils
+        - dosfstools
+        - raspberrypi-sys-mods
+        - apt-listchanges
+        - libpam-chksshpwd
+        - rpi-update
+        - rsync
+        - policykit-1
+        - ssh-import-id
+        - rng-tools
+        - ethtool
+        - vl805fw
+        - pciutils
+        - rpi-eeprom
+        - raspinfo
+    02-net-tweaks:
+      00-packages:
+        - firmware-atheros
+        - firmware-brcm80211
+        - firmware-libertas
+        - firmware-misc-nonfree
+        - firmware-realtek
+        - raspberrypi-net-mods
+        - dhcpcd5
+        - net-tools
