@@ -66,3 +66,8 @@ usermod --pass='*' root
 EOF
 
 rm -f "${ROOTFS_DIR}/etc/ssh/"ssh_host_*_key*
+
+# remove pi no password and replace with modified username
+rm -f "${ROOTFS_DIR}/etc/sudoers.d/010_pi-nopasswd"
+echo "${FIRST_USER_NAME} ALL=(ALL) NOPASSWD: ALL" >> "${ROOTFS_DIR}/etc/sudoers.d/010_${FIRST_USER_NAME}-nopasswd"
+chmod 0440 "${ROOTFS_DIR}/etc/sudoers.d/010_${FIRST_USER_NAME}-nopasswd"
